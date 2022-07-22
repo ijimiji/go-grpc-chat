@@ -25,7 +25,7 @@ type Server struct {
 func (s *Server) CreateStream(connection *pb.Connect, stream pb.ChatService_CreateStreamServer) error {
 	conn := &Connection{
 		stream: stream,
-		id:     connection.User.Id,
+		id:     connection.User.Name,
 		active: true,
 		error:  make(chan error),
 	}

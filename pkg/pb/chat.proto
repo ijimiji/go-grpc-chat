@@ -3,14 +3,13 @@ syntax = "proto3";
 option go_package = "grpchat/pkg/pb";
 
 message User {
-    string id = 1;
-    string name = 2;
+    string name = 1;
 }
 
 message Message {
     string id = 1;
     string text = 2;
-    string from = 3;
+    User   from = 3;
     string timestamp = 4;
 }
 
